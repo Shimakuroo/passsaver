@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+
+  "version": "1.0",
+  "name": "PassSave",
+  "description": "Sauvegarde les mot de passe",
+
+
+  "icons": {
+    "48": "icons/logo.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "PassSave",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["PassSave.js"]
+        }
+    ]
+}
